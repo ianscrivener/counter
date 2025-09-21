@@ -1,0 +1,12 @@
+{
+    "suicides": {
+        "start-count": 0,
+        "start-datetime": "2022-05-22T00:00:00+10:00",
+        "increment-seconds": 10
+    },
+    "early-deaths":{
+        "start-count": 0,
+        "start-datetime": "2022-05-22T00:00:00+10:00",
+        "increment-seconds": 10
+    }
+}
