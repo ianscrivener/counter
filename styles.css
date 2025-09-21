@@ -127,6 +127,14 @@ body {
     margin-bottom: 0px;
 }
 
+.mobile-break {
+    display: inline;
+}
+
+.mobile-newline {
+    display: inline;
+}
+
 @media (max-width: 768px) {
     body {
         padding: 10px 15px;
@@ -174,7 +182,20 @@ body {
     }
     
     .footer-text {
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin-top: 15px;
     }
+
+    .mobile-break {
+        display: none;
+    }
+
+    .mobile-newline {
+        display: block;
+    }
+
+    .footer-text-small {
+        font-size: 0.6rem;
+        margin-top: 1px;
+    }    
 }
