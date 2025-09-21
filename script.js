@@ -12,8 +12,9 @@ class CounterManager {
 
     async init() {
         try {
-            // Load configuration from data.json
-            const response = await fetch('data.json');
+            // Load configuration from data.json with cache busting
+            const cacheBuster = new Date().getTime();
+            const response = await fetch(`data.json?v=${cacheBuster}`);
             this.config = await response.json();
             
             // Initialize current counts
