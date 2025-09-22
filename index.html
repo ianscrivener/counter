@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Australian Men</title>
-    
+
     <!-- Cache Control Meta Tags -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    
+
     <link rel="stylesheet" href="styles.css">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -20,9 +21,10 @@
     <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
 </head>
+
 <body>
     <h1 class="title">Australian Men</h1>
-    
+
     <div class="section">
         <div class="col-5">
             <h2 class="section-title">Suicides</h2>
@@ -37,7 +39,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="section early-deaths">
         <div class="col-5">
             <h2 class="section-title">Early deaths</h2>
@@ -54,15 +56,139 @@
             </div>
         </div>
     </div>
-    
-    <p class="footer-text">under Albanese Government<span class="mobile-break"> - </span><span class="mobile-newline">since 21 May 2022</span></p>
+
+    <p class="footer-text">under Albanese Government<span class="mobile-break"> - </span><span
+            class="mobile-newline">since 21 May 2022</span></p>
 
     <p class="footer-text-small">one Australian male suicide every ~3.6 hours</p>
     <p class="footer-text-small">one Australian male early death every ~29 minutes</p>
+    <p class="footer-text-small">&nbsp;</p>
+    <p class="footer-text-small">
+        <a href="#" onclick="showPage('sources')">Sources</a> |
+        <a href="#" onclick="showPage('about')">About</a>
+    </p>
+    </div>
+
+    <!-- ############################################################ -->
+    <!-- Sources Page -->
+    <div id="sources-page" class="page hidden">
+        <div class="page-header">
+            <h1 class="page-title">Sources</h1>
+            <p class="page-nav">
+                <a href="#" onclick="showPage('home')">← Back</a>
+            </p>
+        </div>
+
+        <div class="page-content">
+            <h1>Data Sources and Methodology</h1>
+            <h2>Official Data Sources</h2>
+            <p><strong>Primary sources:</strong></p>
+            <ul>
+                <li><a
+                        href="https://www.abs.gov.au/statistics/health/causes-death/causes-death-australia/latest-release">Australian
+                        Bureau of Statistics - Causes of Death, Australia 2023</a></li>
+                <li><a href="https://www.aihw.gov.au/suicide-self-harm-monitoring/overview/summary">Australian Institute
+                        of Health and Welfare - Suicide & Self-harm Monitoring</a></li>
+                <li><a
+                        href="https://www.aihw.gov.au/reports/life-expectancy-deaths/deaths-in-australia/contents/leading-causes-of-death">AIHW
+                        - Deaths in Australia</a></li>
+            </ul>
+            <p><strong>Supporting sources:</strong></p>
+            <ul>
+                <li><a href="https://mindframe.org.au/suicide/data-statistics/abs-data-summary-2023">Mindframe - ABS
+                        Data Summary 2023</a></li>
+                <li><a href="https://www.suicidepreventionaust.org/news/statsandfacts/">Suicide Prevention Australia -
+                        Statistics</a></li>
+            </ul>
+            <h2>Calculation Method</h2>
+            <p><strong>Male Suicides:</strong></p>
+            <ul>
+                <li>Based on 2,455 male suicides in 2022 (ABS data)</li>
+                <li>Daily rate: 6.7 deaths per day</li>
+                <li>Counter increment: 1 death every 12,896 seconds</li>
+            </ul>
+            <p><strong>Male Early Deaths:</strong></p>
+            <ul>
+                <li>Based on 17,960 male potentially avoidable deaths before age 75 in 2022 (AIHW data)</li>
+                <li>Daily rate: 49.2 deaths per day</li>
+                <li>Counter increment: 1 death every 1,756 seconds</li>
+            </ul>
+            <p><strong>Start Date:</strong> May 21, 2022 00:00:00 UTC</p>
+            <p><strong>Definitions:</strong></p>
+            <ul>
+                <li>Suicides: Deaths classified under ICD-10 codes X60-X84 and Y87.0</li>
+                <li>Early deaths: Potentially avoidable deaths in males before age 75, as defined by AIHW methodology
+                </li>
+            </ul>
+            <p>All calculations use official Australian government mortality statistics and represent statistical
+                averages based on the most recent complete annual data available.</p>
+
+        </div>
+    </div>
+
+    <!-- ############################################################ -->
+    <!-- About Page -->
+    <div id="about-page" class="page hidden">
+        <div class="page-header">
+            <h1 class="page-title">About</h1>
+            <p class="page-nav">
+                <a href="#" onclick="showPage('home')">← Back</a>
+            </p>
+        </div>
+
+        <div class="page-content">
+            <h2>Purpose</h2>
+            <p>This counter serves as a stark reminder of the ongoing mental health crisis affecting Australian men. By
+                displaying real-time statistics, we aim to:</p>
+            <ul>
+                <li>Raise awareness about male suicide rates in Australia</li>
+                <li>Highlight the urgency of mental health support and intervention</li>
+                <li>Encourage conversations about men's mental health</li>
+                <li>Advocate for better support systems and resources</li>
+            </ul>
+
+            <h2>The Crisis</h2>
+            <p>Australia has one of the highest suicide rates among developed nations, with men accounting for
+                approximately 75% of all suicide deaths. This represents not just statistics, but real lives, families,
+                and communities affected by this preventable tragedy.</p>
+
+            <h2>Getting Help</h2>
+            <div class="help-section">
+                <h3>Crisis Support</h3>
+                <ul>
+                    <li><strong>Lifeline:</strong> 13 11 14 (24/7 crisis support)</li>
+                    <li><strong>Beyond Blue:</strong> 1300 22 4636 (24/7 support line)</li>
+                    <li><strong>MensLine Australia:</strong> 1300 78 99 78 (24/7 telephone and online support)</li>
+                    <li><strong>Emergency:</strong> 000</li>
+                </ul>
+            </div>
+
+            <h2>Take Action</h2>
+            <p>If you or someone you know is struggling:</p>
+            <ul>
+                <li>Reach out to mental health services</li>
+                <li>Talk to friends, family, or healthcare professionals</li>
+                <li>Support mental health organizations and advocacy</li>
+                <li>Help reduce stigma by having open conversations</li>
+            </ul>
+
+            <div class="disclaimer">
+                <p><em>This website is for awareness purposes only and is not a substitute for professional mental
+                        health care. If you are in crisis, please contact emergency services or a crisis helpline
+                        immediately.</em></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Counter Page -->
+    <div id="home-page" class="page">
+        <!-- Content moved here by JavaScript -->
 
 
 
-    
-    <script src="script.js"></script>
+
+
+        <script src="script.js"></script>
 </body>
+
 </html>

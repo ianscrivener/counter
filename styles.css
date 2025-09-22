@@ -135,6 +135,116 @@ body {
     display: inline;
 }
 
+/* Page Navigation Styles */
+.page {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+}
+
+.page.hidden {
+    display: none;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #5D4037;
+    margin-bottom: 20px;
+}
+
+.page-nav {
+    margin: 0;
+}
+
+.page-nav a {
+    color: #5D4037;
+    text-decoration: underline;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.page-nav a:hover {
+    color: #8D6E63;
+}
+
+.page-content {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.page-content h2 {
+    font-size: 2.2rem;
+    color: #5D4037;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #5D4037;
+    padding-bottom: 10px;
+}
+
+.page-content h3 {
+    font-size: 1.8rem;
+    color: #5D4037;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.page-content p {
+    font-size: 1.1rem;
+    color: #5D4037;
+    margin-bottom: 15px;
+}
+
+.page-content ul {
+    color: #5D4037;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    padding-left: 25px;
+}
+
+.page-content li {
+    margin-bottom: 8px;
+}
+
+.source-section {
+    margin-bottom: 35px;
+    padding: 20px;
+    background-color: rgba(244, 208, 63, 0.3);
+    border-left: 4px solid #5D4037;
+}
+
+.help-section {
+    background-color: rgba(244, 208, 63, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.disclaimer {
+    background-color: rgba(93, 64, 55, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+/* Footer links styling */
+.footer-text-small a {
+    color: #5D4037;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer-text-small a:hover {
+    color: #8D6E63;
+}
+
 @media (max-width: 768px) {
     body {
         padding: 10px 15px;
@@ -197,5 +307,31 @@ body {
     .footer-text-small {
         font-size: 0.6rem;
         margin-top: 1px;
+    }
+    
+    /* Mobile styles for pages */
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .page-nav a {
+        font-size: 1rem;
+    }
+    
+    .page-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .page-content h3 {
+        font-size: 1.4rem;
+    }
+    
+    .page-content p, .page-content ul {
+        font-size: 0.95rem;
+    }
+    
+    .source-section, .help-section {
+        padding: 15px;
+        margin-bottom: 20px;
     }    
 }

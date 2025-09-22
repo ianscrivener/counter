@@ -1,3 +1,59 @@
+// Page Navigation System
+function showPage(pageId) {
+    // Hide all pages
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.add('hidden');
+    });
+    
+    // Show the selected page
+    const targetPage = document.getElementById(pageId + '-page');
+    if (targetPage) {
+        targetPage.classList.remove('hidden');
+    }
+    
+    // Update page title
+    switch(pageId) {
+        case 'home':
+            document.title = 'Australian Men';
+            break;
+        case 'sources':
+            document.title = 'Sources - Australian Men';
+            break;
+        case 'about':
+            document.title = 'About - Australian Men';
+            break;
+    }
+}
+
+// Initialize page system when DOM loads
+document.addEventListener('DOMContentLoaded', () => {
+    // Move the main counter content to the home page container
+    const homePageContainer = document.getElementById('home-page');
+    const title = document.querySelector('.title');
+    const sections = document.querySelectorAll('.section');
+    const footerTexts = document.querySelectorAll('.footer-text, .footer-text-small');
+    
+    // Move all main content to home page
+    if (homePageContainer) {
+        homePageContainer.appendChild(title);
+        sections.forEach(section => homePageContainer.appendChild(section));
+        footerTexts.forEach(footer => homePageContainer.appendChild(footer));
+    }
+    
+    // Initialize counter manager
+    const counterManager = new CounterManager();
+    counterManager.init();
+    
+    // Make it globally accessible for debugging
+    window.counterManager = counterManager;
+    
+    // Make showPage globally accessible
+    window.showPage = showPage;
+    
+    // Start on home page
+    showPage('home');
+});
+
 // Counter Management System with Animation
 class CounterManager {
     constructor() {
@@ -142,15 +198,6 @@ class CounterManager {
         }
     }
 }
-
-// Initialize the counter manager when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-    const counterManager = new CounterManager();
-    counterManager.init();
-    
-    // Make it globally accessible for debugging
-    window.counterManager = counterManager;
-});
 
 // Handle page visibility changes to pause/resume when tab is not active
 document.addEventListener('visibilitychange', () => {
